@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Class 4 Maths Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🧮 Class 4 Maths Quiz</h1>
+    <p class="sub">100 questions · learn from every answer</p>
+  </header>
+
+  <main>
+    <!-- Start screen -->
+    <section id="start" class="card">
+      <h2>Choose what to practise</h2>
+      <div id="topics" class="chips" role="group" aria-label="Topics"></div>
+      <div class="row">
+        <button id="startAll" class="btn primary">Start quiz (<span id="countSel">100</span> questions)</button>
+        <button id="startQuick" class="btn">⚡ Quick 10</button>
+      </div>
+      <p id="best" class="muted"></p>
+    </section>
+
+    <!-- Question screen -->
+    <section id="quiz" class="card" hidden>
+      <div class="top">
+        <span id="qnum"></span>
+        <span id="topicTag" class="tag"></span>
+        <span id="score" class="score"></span>
+      </div>
+      <div class="bar"><div id="barFill"></div></div>
+      <h2 id="question"></h2>
+      <div id="options" class="options"></div>
+      <div id="feedback" class="feedback" aria-live="polite" hidden></div>
+      <div class="row">
+        <button id="quit" class="btn ghost">End quiz</button>
+        <button id="next" class="btn primary" hidden>Next ➜</button>
+      </div>
+      <p class="muted small">Tip: press 1–4 to answer, Enter for next.</p>
+    </section>
+
+    <!-- Result screen -->
+    <section id="result" class="card" hidden>
+      <h2 id="resultTitle"></h2>
+      <p id="resultScore" class="big"></p>
+      <table id="breakdown"></table>
+      <div class="row">
+        <button id="retryWrong" class="btn primary">Retry wrong answers</button>
+        <button id="home" class="btn">Back to start</button>
+      </div>
+      <h3 id="reviewTitle">Review your mistakes</h3>
+      <ol id="review"></ol>
+    </section>
+  </main>
+
+  <footer class="muted small">Made for Class 4 learners · works offline</footer>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
